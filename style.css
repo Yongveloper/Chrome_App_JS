@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #fff;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+.bgimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  animation: fadeIn 0.2s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.weather {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: #080808;
+  opacity: 0.8;
+  padding: 13px;
+  border-radius: 8px;
+}
+
+.weather__condition img {
+  width: 50px;
+  height: 50px;
+}
+
+.clock {
+  margin: 25px 0;
+  font-size: 3.5em;
+  animation: topDown 0.5s;
+}
+
+.weather,
+.clock,
+.showing {
+  animation: topDown 0.8s;
+}
+
+.clock h1 {
+  margin: 0;
+  text-shadow: #080808 5px 10px 10px;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+
+.form,
+.grettings {
+  display: none;
+}
+.showing {
+  display: block;
+}
+
+.grettings {
+  margin: 0;
+  font-size: 2.5em;
+  text-shadow: #fff 0px 30px 5px;
+  background: linear-gradient(to right, #fff 20%, rgb(255, 255, 119) 40%, rgb(253, 253, 0) 60%, #fff 80%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes topDown {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name-input {
+  font-size: 2em;
+}
+
+.name-input {
+  background: none;
+  border: none;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+}
+
+.name-input:focus {
+  border: 2px solid #9ecaed;
+  border-radius: 7px;
+  box-shadow: 0 0 40px #9ecaed;
+  transform: scale(1.1);
+}
+
+.name-input::placeholder {
+  color: #fcf1f1;
+}
+
+.form input,
+.toDoForm,
+.toDoForm input,
+.center-wrap {
+  text-align: center;
+}
+
+.todo-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #080808;
+  opacity: 0.8;
+  font-size: 1.2em;
+  transition: all 300ms ease-out;
+}
+
+.todo-wrap h2 {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.toggle-button {
+  width: 60px;
+  position: absolute;
+  left: -60px;
+  top: 30px;
+  padding: 8px 5px;
+  background-color: green;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+.toDoInput {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.pending-wrap,
+.finished-wrap {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  overflow: auto;
+}
+
+.pending-wrap::-webkit-scrollbar,
+.finished-wrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pending-wrap::-webkit-scrollbar-thumb,
+.finished-wrap::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.pending-wrap::-webkit-scrollbar-track,
+.finished-wrap::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 3px #fff;
+}
