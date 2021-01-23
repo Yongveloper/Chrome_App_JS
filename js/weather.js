@@ -1,5 +1,6 @@
 'use strict';
 
+const weatherContainer = document.querySelector('.weather');
 const weatherDisplay = document.querySelector('.js-weather');
 const weatherCondition = document.querySelector('.js-condition');
 
@@ -25,6 +26,7 @@ function getWeaher(lat, lng) {
       <img src="http://openweathermap.org/img/wn/${icon}.png" alt="icon" />
       <div class="weather__discription">Condition: ${description}<div/>     
         `;
+      weatherContainer.classList.add('showing');
     });
 }
 
