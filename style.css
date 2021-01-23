@@ -55,6 +55,7 @@ input {
   top: 10px;
   left: 30px;
   text-align: center;
+  font-weight: 300;
   font-size: 1.2em;
   background-color: #080808;
   opacity: 0.8;
@@ -80,9 +81,6 @@ input {
 .clock {
   margin: 25px 0;
   font-size: 3.5em;
-}
-
-.clock {
   animation: topDown 0.8s;
 }
 
@@ -99,6 +97,7 @@ input {
 
 .clock h1 {
   margin: 0;
+  font-weight: 100;
   text-shadow: #080808 5px 10px 10px;
 }
 
@@ -120,6 +119,7 @@ button {
 .grettings {
   margin: 0;
   font-size: 2.5em;
+  font-weight: 300;
   text-shadow: #fff 0px 30px 5px;
   background: linear-gradient(to right, #fff 20%, rgb(255, 255, 119) 40%, rgb(253, 253, 0) 60%, #fff 80%);
   background-size: 200% auto;
@@ -185,6 +185,7 @@ button {
 .todo-wrap h2 {
   border-top: 1px solid;
   border-bottom: 1px solid;
+  font-weight: 500;
 }
 
 .toggle-button {
@@ -201,6 +202,10 @@ button {
 .toDoInput {
   width: 100%;
   font-size: 1.2em;
+}
+
+.finished-wrap {
+  text-decoration: line-through;
 }
 
 .pending-wrap,
