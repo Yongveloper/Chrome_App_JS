@@ -286,7 +286,12 @@ button {
 
 .audioNextBtn {
   cursor: pointer;
+  user-select: none;
   font-size: 1.4em;
+}
+
+.audioNextBtn:active {
+  transform: scale(0.85);
 }
 
 .invisiable {
