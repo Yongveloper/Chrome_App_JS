@@ -274,6 +274,7 @@ button {
   background-color: #fff;
   padding: 6px;
   border-radius: 18px;
+  font-size: 0.85em;
   font-weight: 700;
   box-shadow: 0 6px #999;
   user-select: none;
@@ -288,7 +289,7 @@ button {
 .audioNextBtn {
   cursor: pointer;
   user-select: none;
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin-right: 3px;
 }
 
