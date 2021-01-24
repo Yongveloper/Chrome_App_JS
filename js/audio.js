@@ -14,14 +14,14 @@ function playAudio() {
   audioContainer.volume = 0.2;
   audioContainer.loop = true;
   audioContainer.play();
-  playBtn.innerText = '♬ Stop Music';
+  playBtn.innerText = '♬ Stop BGM';
   audioNextBtn.classList.remove('invisiable');
   audioCountDisplay.classList.remove('invisiable');
 }
 
 function stopAudio() {
   audioContainer.pause();
-  playBtn.innerText = '♬ Play Music';
+  playBtn.innerText = '♬ Play BGM';
   audioNextBtn.classList.add('invisiable');
   audioCountDisplay.classList.add('invisiable');
 }
@@ -36,7 +36,7 @@ function loadAudio() {
 function handlePlayBtnClick() {
   const state = playBtn.innerText;
 
-  if (state === '♬ Play Music') {
+  if (state === '♬ Play BGM') {
     loadAudio();
   } else {
     stopAudio();
