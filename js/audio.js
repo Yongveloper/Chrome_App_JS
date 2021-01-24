@@ -7,21 +7,24 @@ const audioNextBtn = document.querySelector('.js-audioNextBtn');
 const audioCountDisplay = document.querySelector('.js-audioNumDisplay');
 
 const MUSIC_COUNT = 5;
+const PLAY_MUSIC = '♬ Play BGM';
+const STOP_MUSIC = '♬ Stop BGM';
+const AUDIO_VOLUME = 0.2;
 
 let currentAudio = 1;
 
 function playAudio() {
-  audioContainer.volume = 0.2;
+  audioContainer.volume = AUDIO_VOLUME;
   audioContainer.loop = true;
   audioContainer.play();
-  playBtn.innerText = '♬ Stop BGM';
+  playBtn.innerText = STOP_MUSIC;
   audioNextBtn.classList.remove('invisiable');
   audioCountDisplay.classList.remove('invisiable');
 }
 
 function stopAudio() {
   audioContainer.pause();
-  playBtn.innerText = '♬ Play BGM';
+  playBtn.innerText = PLAY_MUSIC;
   audioNextBtn.classList.add('invisiable');
   audioCountDisplay.classList.add('invisiable');
 }
@@ -36,7 +39,7 @@ function loadAudio() {
 function handlePlayBtnClick() {
   const state = playBtn.innerText;
 
-  if (state === '♬ Play BGM') {
+  if (state === PLAY_MUSIC) {
     loadAudio();
   } else {
     stopAudio();
