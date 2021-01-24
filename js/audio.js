@@ -10,6 +10,7 @@ const MUSIC_COUNT = 5;
 const PLAY_MUSIC = '♬ Play BGM';
 const STOP_MUSIC = '♬ Stop BGM';
 const AUDIO_VOLUME = 0.2;
+const INVISABLE = 'invisiable';
 
 let currentAudio = 1;
 
@@ -18,15 +19,15 @@ function playAudio() {
   audioContainer.loop = true;
   audioContainer.play();
   playBtn.innerText = STOP_MUSIC;
-  audioNextBtn.classList.remove('invisiable');
-  audioCountDisplay.classList.remove('invisiable');
+  audioNextBtn.classList.remove(INVISABLE);
+  audioCountDisplay.classList.remove(INVISABLE);
 }
 
 function stopAudio() {
   audioContainer.pause();
   playBtn.innerText = PLAY_MUSIC;
-  audioNextBtn.classList.add('invisiable');
-  audioCountDisplay.classList.add('invisiable');
+  audioNextBtn.classList.add(INVISABLE);
+  audioCountDisplay.classList.add(INVISABLE);
 }
 
 function loadAudio() {
