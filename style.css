@@ -289,10 +289,15 @@ button {
   cursor: pointer;
   user-select: none;
   font-size: 1.4em;
+  margin-right: 3px;
 }
 
 .audioNextBtn:active {
   transform: scale(0.85);
+}
+
+.audio-count {
+  font-size: 0.7em;
 }
 
 .invisiable {
