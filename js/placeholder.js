@@ -11,9 +11,12 @@ const sentences = [
   'Eat!',
   'Washing Dogs',
   'Vanilla JS Challenge!',
-  "Let's clone coding",
   'English Study',
   'Clone Coding',
+  'CSS Study',
+  'HTML Study',
+  'Data structure Study',
+  'Playing games',
 ];
 
 function sleep(ms) {
