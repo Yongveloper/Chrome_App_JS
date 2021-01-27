@@ -32,14 +32,14 @@ async function updatePlaceholder() {
     if (toDoinput.placeholder === '') {
       const now = new Date();
       const sentence = sentences[now.getSeconds() % sentences.length];
-      for (const i in sentence) {
+      for (let i = 0; i < sentence.length; i++) {
         if (checkInputFocuse()) break;
         toDoinput.placeholder += sentence[i];
         await sleep(50);
       }
     } else {
       const sentence = toDoinput.placeholder;
-      for (const i in sentence) {
+      for (let i = 0; i < sentence.length; i++) {
         if (checkInputFocuse()) break;
         toDoinput.placeholder = sentence.slice(0, sentence.length - i - 1);
         await sleep(20);
