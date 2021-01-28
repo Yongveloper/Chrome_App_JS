@@ -14,6 +14,7 @@ const AUDIO_VOLUME = 0.2;
 const INVISABLE = 'invisiable';
 const START_TIME = 0;
 
+let isPlaying = false;
 let currentAudio = 1;
 let timerInterval;
 let time = START_TIME;
@@ -29,6 +30,7 @@ async function playAudio() {
 }
 
 function stopAudio() {
+  isPlaying = false;
   playBtn.innerText = PLAY_MUSIC;
   audioNextBtn.classList.add(INVISABLE);
   audioCountDisplay.classList.add(INVISABLE);
@@ -37,6 +39,7 @@ function stopAudio() {
 }
 
 function loadAudio() {
+  isPlaying = true;
   const source = document.querySelector('#audioSource');
   source.src = `audio/${currentAudio}.mp3`;
   audioContainer.load();
@@ -44,12 +47,10 @@ function loadAudio() {
 }
 
 function handlePlayBtnClick() {
-  const state = playBtn.innerText;
-
-  if (state === PLAY_MUSIC) {
-    loadAudio();
-  } else {
+  if (isPlaying) {
     stopAudio();
+  } else {
+    loadAudio();
   }
 }
 
