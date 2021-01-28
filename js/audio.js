@@ -14,13 +14,16 @@ const INVISABLE = 'invisiable';
 
 let currentAudio = 1;
 
-function playAudio() {
-  audioContainer.volume = AUDIO_VOLUME;
-  audioContainer.loop = true;
-  audioContainer.play();
+async function playAudio() {
   playBtn.innerText = STOP_MUSIC;
   audioNextBtn.classList.remove(INVISABLE);
   audioCountDisplay.classList.remove(INVISABLE);
+  audioContainer.volume = AUDIO_VOLUME;
+  audioContainer.loop = false;
+  await audioContainer.play();
+  var minutes = parseInt(audioContainer.duration / 60, 10);
+  var seconds = parseInt(audioContainer.duration % 60);
+  console.log(minutes, seconds);
 }
 
 function stopAudio() {
@@ -47,7 +50,7 @@ function handlePlayBtnClick() {
   }
 }
 
-function handleNextButtonClick() {
+function loadNextAudio() {
   const audioNum = document.querySelector('.js-audioNum');
 
   if (currentAudio < MUSIC_COUNT) {
@@ -62,4 +65,5 @@ function handleNextButtonClick() {
 }
 
 playBtnContainer.addEventListener('click', handlePlayBtnClick);
-audioNextBtn.addEventListener('click', handleNextButtonClick);
+audioNextBtn.addEventListener('click', loadNextAudio);
+audioContainer.addEventListener('ended', loadNextAudio);
