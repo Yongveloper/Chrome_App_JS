@@ -291,6 +291,7 @@ button {
   cursor: pointer;
   user-select: none;
   font-size: 1.2em;
+  margin-left: 12px;
   margin-right: 3px;
 }
 
