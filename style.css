@@ -14,7 +14,8 @@ body {
   margin: 0;
   color: #fff;
   background-color: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
 }
 
 ul {
@@ -25,6 +26,7 @@ ul {
 li {
   list-style: none;
   margin-bottom: 8px;
+  animation: fadeIn 0.1s linear;
 }
 
 input {
@@ -123,7 +125,13 @@ button {
   font-size: 2.5em;
   font-weight: 300;
   text-shadow: #fff 0px 30px 5px;
-  background: linear-gradient(to right, #fff 20%, rgb(255, 255, 119) 40%, rgb(253, 253, 0) 60%, #fff 80%);
+  background: linear-gradient(
+    to right,
+    #fff 20%,
+    rgb(255, 255, 119) 40%,
+    rgb(253, 253, 0) 60%,
+    #fff 80%
+  );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
