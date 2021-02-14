@@ -18,7 +18,10 @@ body {
     Arial, sans-serif;
 }
 
-ul {
+ul,
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -100,9 +103,21 @@ input {
 }
 
 .clock h1 {
-  margin: 0;
+  width: 300px;
   font-weight: 100;
   text-shadow: #080808 5px 10px 10px;
+}
+
+.clock h2 {
+  font-size: 0.5em;
+  font-weight: 100;
+  text-shadow: #080808 5px 5px 5px;
+}
+
+.clock h3 {
+  font-size: 0.4em;
+  font-weight: 100;
+  text-shadow: #080808 5px 5px 5px;
 }
 
 button {
