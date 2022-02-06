@@ -1,14 +1,10 @@
 'use strict';
 
-const body = document.querySelector('body');
-
 const IMG_NUMBER = 5;
 
-function paintImage(imgNumber) {
-  const image = new Image();
-  image.src = `images/${imgNumber + 1}.jpg`;
-  image.classList.add('bgimage');
-  body.prepend(image);
+function init() {
+  const randomNumber = genRandom();
+  paintImage(randomNumber);
 }
 
 function genRandom() {
@@ -16,9 +12,12 @@ function genRandom() {
   return number;
 }
 
-function init() {
-  const randomNumber = genRandom();
-  paintImage(randomNumber);
+function paintImage(imgNumber) {
+  const body = document.querySelector('body');
+  const image = new Image();
+  image.src = `images/${imgNumber + 1}.jpg`;
+  image.classList.add('bgimage');
+  body.prepend(image);
 }
 
 init();
