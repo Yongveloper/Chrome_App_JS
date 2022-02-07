@@ -1,9 +1,14 @@
 'use strict';
 
-const clockContainer = document.querySelector('.js-clock');
 const clockTitile = clockContainer.querySelector('h1');
 
+function init() {
+  getDate();
+  setInterval(getTime, 1000);
+}
+
 function getDate() {
+  const clockContainer = document.querySelector('.js-clock');
   const today = new Date();
   const dateTitle = clockContainer.querySelector('h2');
   const dayNameTitle = clockContainer.querySelector('h3');
@@ -28,11 +33,6 @@ function getTime() {
   clockTitile.innerText = `${hours < 10 ? `0${hours}` : hours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
-}
-
-function init() {
-  getDate();
-  setInterval(getTime, 1000);
 }
 
 init();
