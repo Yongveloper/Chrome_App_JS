@@ -1,14 +1,15 @@
 'use strict';
 
-const sidebar = document.querySelector('.todo-wrap');
-const button = document.querySelector('.toggle-button');
-
 const HIDE = 'Hide';
 const SHOW = 'Show';
 const COLOR_RED = 'red';
 const COLOR_GREEN = 'green';
 
+const button = document.querySelector('.toggle-button');
+button.addEventListener('click', handleButtonClick);
+
 function handleButtonClick() {
+  const sidebar = document.querySelector('.todo-wrap');
   const text = button.innerText;
 
   if (text === HIDE) {
@@ -21,5 +22,3 @@ function handleButtonClick() {
     sidebar.style.right = '0';
   }
 }
-
-button.addEventListener('click', handleButtonClick);
