@@ -1,5 +1,6 @@
 'use strict';
 
+const clockContainer = document.querySelector('.js-clock');
 const clockTitile = clockContainer.querySelector('h1');
 
 function init() {
@@ -8,7 +9,6 @@ function init() {
 }
 
 function getDate() {
-  const clockContainer = document.querySelector('.js-clock');
   const today = new Date();
   const dateTitle = clockContainer.querySelector('h2');
   const dayNameTitle = clockContainer.querySelector('h3');
